@@ -1,4 +1,3 @@
-// Simple in-memory store (no MongoDB needed!)
 let students = [];
 let nextId = 1;
 
@@ -26,4 +25,11 @@ const remove = (id) => {
   return true;
 };
 
-module.exports = { getAll, getById, create, update, remove };
+const search = (query) => {
+  return students.filter(s =>
+    s.name.toLowerCase().includes(query.toLowerCase()) ||
+    s.course.toLowerCase().includes(query.toLowerCase())
+  );
+};
+
+module.exports = { getAll, getById, create, update, remove, search };

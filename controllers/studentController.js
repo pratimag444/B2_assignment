@@ -26,3 +26,9 @@ exports.remove = (req, res) => {
   if (!deleted) return res.status(404).json({ error: "Student not found" });
   res.json({ message: "Student deleted" });
 };
+
+exports.search = (req, res) => {
+  const { q } = req.query;
+  if (!q) return res.status(400).json({ error: "Search query required" });
+  res.json(Student.search(q));
+};

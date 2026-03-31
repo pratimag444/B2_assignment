@@ -1,0 +1,7 @@
+{
+  "name": "Student Management System API",
+  "version": "1.0.0",
+  "description": "REST API for managing student records",
+  "title": "Student Management API",
+  "url": "http://localhost:3000"
+}
