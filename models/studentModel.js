@@ -33,3 +33,4 @@ const search = (query) => {
 };
 
 module.exports = { getAll, getById, create, update, remove, search };
+
